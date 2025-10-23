@@ -21,13 +21,14 @@ function calculate() {
   totalEl.textContent = format(total);
 }
 
+// Update automatically when user types or changes GST
 amountInput.addEventListener("input", calculate);
 gstSelect.addEventListener("change", calculate);
 
 resetBtn.addEventListener("click", () => {
-  amountInput.value = 20000;
-  gstSelect.value = "3";
-  calculate();
+  amountInput.value = "";
+  gstSelect.value = "0";
+  actualEl.textContent = "0.00";
+  gstAmtEl.textContent = "0.00";
+  totalEl.textContent = "0.00";
 });
-
-calculate();
