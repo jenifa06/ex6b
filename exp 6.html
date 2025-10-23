@@ -4,19 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GST Calculator</title>
-  <link rel="stylesheet" href="exp 6.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="card">
     <h1>GST Calculator</h1>
 
     <label for="amount">Amount:</label>
-    <input type="number" id="amount" placeholder="Enter amount" value="0">
+    <input type="number" id="amount" placeholder="Enter amount" min="0">
 
     <label for="gst">GST (%):</label>
     <select id="gst">
       <option value="0">0%</option>
-      <option value="3" selected>%</option>
+      <option value="3">3%</option>
       <option value="5">5%</option>
       <option value="12">12%</option>
       <option value="18">18%</option>
@@ -24,17 +24,14 @@
     </select>
 
     <div class="results">
-      <p>Actual Amount: </p>
-      <p>GST: </p>
-      <p>Total: </p>
+      <p>Actual Amount: <span id="actual">0.00</span></p>
+      <p>GST: <span id="gstamt">0.00</span></p>
+      <p>Total: <span id="total">0.00</span></p>
     </div>
 
     <button id="reset">Reset</button>
   </div>
 
-  <script src="exp 6.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
-
-
